@@ -3,7 +3,7 @@ SC.initialize({
 });
 
 $(document).ready(function() {
-  SC.get('/tracks', { genres: 'folk' }, function(tracks) {
+  SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
     $(tracks).each(function(index, track) {
       $('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + track.artwork_url + '">'));
     });
