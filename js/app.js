@@ -3,7 +3,7 @@ SC.initialize({
 });
 
 $(document).ready(function() {
-  SC.get('/tracks', { genres: 'festival trap' }, function(tracks) {
+  SC.get('/tracks', { genres: 'lesbian acid folk' }, function(tracks) {
     $(tracks).each(function(index, track) {
       $('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + track.artwork_url + '">'));
     });
