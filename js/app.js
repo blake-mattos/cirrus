@@ -5,7 +5,10 @@ SC.initialize({
 $(document).ready(function() {
   SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
     $(tracks).each(function(index, track) {
-      $('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + track.artwork_url + '">'));
+    	var artUrl = track.artwork_url;
+    	var bigArt = artUrl.replace("large", "t500x500");
+    	console.log(bigArt);
+      $('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + bigArt + '">'));
     });
   });
 });
