@@ -5,16 +5,7 @@ SC.initialize({
 $(document).ready(function() {
   SC.get('/tracks', { genres: 'festival trap' }, function(tracks) {
     $(tracks).each(function(index, track) {
-      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+      $('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + track.artwork_url + '">'));
     });
   });
-  console.log('test');
 });
-
-// $(document).ready(function() {
-//   SC.get('/tracks', { genres: 'jazz' }, function(tracks) {
-//     $(tracks).each(function(index, track) {
-//       $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre+ ' - ' + '<img src="' + track.artwork_url +'">'));
-//     });
-//   });
-// });
