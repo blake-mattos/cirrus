@@ -11,7 +11,7 @@ $(document).ready(function() {
 		});
 	});
 	function setBG() {
-		$('#bigWrap').css('background-image', 'url(https://i1.sndcdn.com/artworks-000058493054-vcrifw-t500x500.jpg)');
+		$('#bg').css('background-image', 'url(https://i1.sndcdn.com/artworks-000058493054-vcrifw-t500x500.jpg)');
 	};
 	setBG();
 });
