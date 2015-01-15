@@ -1,1 +1,19 @@
-style.css
+
+body {
+	background-color: #333;
+}
+
+#bigWrap {
+	width: 100vw;
+	height: 100vh;
+	   position: fixed;
+background-size: cover;
+  display: block;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
