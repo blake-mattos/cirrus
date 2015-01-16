@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"play",
+				"playSomeSound"
+			],
+			[
+				"menu",
+				"menuLinks"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
 				"tex",
 				"text-decoration"
 			],
@@ -18,10 +30,6 @@
 			[
 				"mar",
 				"margin-top"
-			],
-			[
-				"back",
-				"background-repeat"
 			],
 			[
 				"fon",
@@ -191,30 +199,26 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 211,
+				"buffer_size": 576,
 				"line_ending": "Unix",
 				"name": "index.html"
-			}
-		},
-		{
-			"contents": "style.css",
-			"file": "style.css",
-			"file_size": -1,
-			"file_write_time": -1,
-			"settings":
-			{
-				"buffer_size": 9,
-				"line_ending": "Unix",
-				"name": "style.css"
 			}
 		},
 		{
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 6,
+				"buffer_size": 1100,
 				"line_ending": "Unix",
 				"name": "app.js"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 470,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -254,13 +258,17 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/bmattos/Documents/Thinkful/Cirrus"
+		"/Applications/MAMP/htdocs/cirrus",
+		"/Applications/MAMP/htdocs/cirrus/css"
 	],
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/cirrus/cirrus.sublime-project",
+		"/Users/bmattos/Documents/Thinkful/cirrus/cirrus.sublime-workspace",
+		"/Users/bmattos/Documents/MarketingSite/thanks.html",
+		"/Applications/MAMP/htdocs/cirrus/style.css",
 		"/Users/bmattos/Documents/MarketingSite/css/style.css",
 		"/Users/bmattos/Dropbox/JustLike/Pages/ComingSoon-v2/css/style.css",
-		"/Users/bmattos/Documents/MarketingSite/thanks.html",
 		"/Applications/MAMP/htdocs/MarketingSite/thanks.html",
 		"/Applications/MAMP/htdocs/MarketingSite/contactengine.php",
 		"/Users/bmattos/Documents/MarketingSite/contactthanks.php",
@@ -302,7 +310,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 		]
@@ -312,6 +320,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"></",
 			"searc",
 			"type",
 			"margin",
@@ -382,7 +391,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -391,15 +400,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 211,
+						"buffer_size": 576,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								211,
-								211
+								559,
+								559
 							]
 						],
 						"settings":
@@ -411,53 +420,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9,
-								9
-							]
-						],
-						"settings":
-						{
-							"auto_name": "style.css",
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "js/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6,
+						"buffer_size": 1100,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6,
-								6
+								431,
+								431
 							]
 						],
 						"settings":
@@ -469,7 +449,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -548,7 +556,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 171.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -5,7 +5,6 @@ $(document).ready(function() {
 		client_id: '781aa72f47d54e21fc84ec186d504e1c'
 	});
 
-
 	function playSomeSound(genre) {
 		SC.get('/tracks', {
 			genres: genre,
@@ -13,10 +12,10 @@ $(document).ready(function() {
 			var random = Math.floor(Math.random() * 49);
 			SC.oEmbed(tracks[random].uri, { autoplay: true }, document.getElementById('player'));
 		});
-	}
+	};
 
 	var menuLinks = document.getElementsByClassName('genre');
-	console.log(menuLinks)
+	console.log(menuLinks);
 	for (var i = 0; i < menuLinks.length; i++) {
 		var menuLink = menuLinks[i];
 		menuLink.onclick = function(e) {
@@ -25,9 +24,6 @@ $(document).ready(function() {
 		};
 	}
 });
-
-
-
 
 
 // SC.initialize({
