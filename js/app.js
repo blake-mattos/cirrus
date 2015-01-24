@@ -40,6 +40,7 @@ function setBG() {
 };
 
 function selectedArt() {
+	console.log('selectedArt: ' +selectedArt);
 	SC.get('/tracks', { genres: selectedGenre }, function(tracks) {
 		$(tracks).each(function(index, track) {
 			var artUrl = track.artwork_url;
