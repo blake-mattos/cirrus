@@ -30,10 +30,9 @@ $('.genre').click(function(){
 // };
 
 function playSomeSound(genre) {
-	SC.oEmbed("http://soundcloud.com/forss/flickermood", {auto_play: true}, function(oembed){
-		console.log("oEmbed response: ", oembed);
-	});
-}
+	SC.oEmbed("http://soundcloud.com/forss/flickermood", {auto_play: true}, document.getElementById('player')
+	);
+};
 
 //set art as bg
 function setBG() {
