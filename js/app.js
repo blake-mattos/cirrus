@@ -13,21 +13,27 @@ console.log(selectedGenre);
 $('.genre').click(function(){
 		//set selectedGenre to what user clicks on
 		var selectedGenre = $(this).text();
-		console.log('selected genre: ' + selectedGenre);
 		playSomeSound(selectedGenre);
 		selectedArt;
+		console.log('selected genre: ' + selectedGenre);
 	});
 
-//player
+// //player
+// function playSomeSound(genre) {
+// 	SC.get('/tracks', {
+// 		genres: genre,
+// 	}, function(tracks) { 
+// 			//SoundCloud return 50 tracks by default, this picks one of them at random
+// 			var random = Math.floor(Math.random() * 49);
+// 			SC.oEmbed(tracks[random].uri, { autoplay: true }, document.getElementById('player'));
+// 		});
+// };
+
 function playSomeSound(genre) {
-	SC.get('/tracks', {
-		genres: genre,
-	}, function(tracks) { 
-			//SoundCloud return 50 tracks by default, this picks one of them at random
-			var random = Math.floor(Math.random() * 49);
-			SC.oEmbed(tracks[random].uri, { autoplay: true }, document.getElementById('player'));
-		});
-};
+	SC.oEmbed("http://soundcloud.com/forss/flickermood", {auto_play: true}, function(oembed){
+		console.log("oEmbed response: ", oembed);
+	});
+}
 
 //set art as bg
 function setBG() {
