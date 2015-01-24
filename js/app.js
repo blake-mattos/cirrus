@@ -5,6 +5,18 @@ $(document).ready(function() {
 		client_id: '781aa72f47d54e21fc84ec186d504e1c'
 	});
 
+//set selectedGenre as global var
+var selectedGenre = ('please choose a genre');
+console.log(selectedGenre);
+
+//choose a genre
+	$('.genre').click(function(){
+		//set selectedGenre to what user clicks on
+		var selectedGenre = $(this).text();
+		console.log('selected genre: ' + selectedGenre);
+		playSomeSound(selectedGenre);
+	});
+
 	// function playSomeSound(genre) {
 	// 	SC.get('/tracks', {
 	// 		genres: genre,
@@ -15,15 +27,7 @@ $(document).ready(function() {
 	// 	});
 	// };
 
-var selectedGenre;
-console.log(selectedGenre);
 
-//choose a genre
-	$('.genre').click(function(){
-		var selectedGenre = $(this).text();
-		playSomeSound(selectedGenre);
-		console.log(selectedGenre);
-	});
 
 function setBG(bigArt) {
 	$('body').css("background-color","blue");
