@@ -9,6 +9,7 @@ $(document).ready(function() {
 		SC.get('/tracks', {
 			genres: genre,
 		}, function(tracks) { 
+			//SoundCloud return 50 tracks by default, this picks one of them at random
 			var random = Math.floor(Math.random() * 49);
 			SC.oEmbed(tracks[random].uri, { autoplay: true }, document.getElementById('player'));
 		});
@@ -23,6 +24,10 @@ $(document).ready(function() {
 			playSomeSound(menuLink.innerHTML);
 		};
 	}
+$('#showGenre').on('click', function() {
+	alert('show genre');
+})
+
 });
 
 
