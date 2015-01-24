@@ -15,6 +15,8 @@ $(document).ready(function() {
 	// 	});
 	// };
 
+var selectedGenre
+console.log(selectedGenre);
 
 //choose a genre
 	$('.genre').click(function(){
@@ -22,8 +24,6 @@ $(document).ready(function() {
 		playSomeSound(selectedGenre);
 		console.log(selectedGenre);
 	});
-
-
 
 function setBG(bigArt) {
 	$('body').css("background-color","blue");
