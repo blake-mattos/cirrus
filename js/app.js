@@ -14,7 +14,7 @@ $('.genre').click(function(){
 		//set selectedGenre to what user clicks on
 		var selectedGenre = $(this).text();
 		playSomeSound(selectedGenre);
-		selectedArt;
+		selectedArt();
 		console.log('selected genre: ' + selectedGenre);
 	});
 
