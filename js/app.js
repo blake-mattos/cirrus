@@ -15,7 +15,7 @@ $(document).ready(function() {
 	// 	});
 	// };
 
-var selectedGenre
+var selectedGenre;
 console.log(selectedGenre);
 
 //choose a genre
