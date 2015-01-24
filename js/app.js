@@ -41,7 +41,7 @@ function setBG() {
 
 
 function getArt() {
-	SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
+	SC.get('/tracks', { genres: selectedGenre }, function(tracks) {
 		$(tracks).each(function(index, track) {
 			var artUrl = track.artwork_url;
 			var bigArt = artUrl.replace("large", "t500x500");
