@@ -15,6 +15,7 @@ $('.genre').click(function(){
 		var selectedGenre = $(this).text();
 		playSomeSound(selectedGenre);
 		console.log('selected genre: ' + selectedGenre);
+		getArt;
 	});
 
 // //player
@@ -38,6 +39,8 @@ function setBG() {
 	$('body').css("background-color","blue");
 };
 
+
+function getArt() {
 	SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
 		$(tracks).each(function(index, track) {
 			var artUrl = track.artwork_url;
@@ -45,6 +48,7 @@ function setBG() {
 			$('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + bigArt + '">'));
 		});
 	});
+};
 
 // function selectedArt() {
 // 	console.log('selectedArt: ' +selectedArt);
