@@ -17,17 +17,16 @@ console.log(selectedGenre);
 		playSomeSound(selectedGenre);
 	});
 
-	// function playSomeSound(genre) {
-	// 	SC.get('/tracks', {
-	// 		genres: genre,
-	// 	}, function(tracks) { 
-	// 		//SoundCloud return 50 tracks by default, this picks one of them at random
-	// 		var random = Math.floor(Math.random() * 49);
-	// 		SC.oEmbed(tracks[random].uri, { autoplay: true }, document.getElementById('player'));
-	// 	});
-	// };
-
-
+//player
+	function playSomeSound(genre) {
+		SC.get('/tracks', {
+			genres: genre,
+		}, function(tracks) { 
+			//SoundCloud return 50 tracks by default, this picks one of them at random
+			var random = Math.floor(Math.random() * 49);
+			SC.oEmbed(tracks[random].uri, { autoplay: true }, document.getElementById('player'));
+		});
+	};
 
 function setBG(bigArt) {
 	$('body').css("background-color","blue");
