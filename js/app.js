@@ -20,10 +20,10 @@ $(document).ready(function() {
 
 	for (var i = 0; i < menuLinks.length; i++) {
 		var menuLink = menuLinks[i];
-		menuLinks.onclick = function(e) {
+		menuLink.onclick = function(e) {
 			e.preventDefault();
 			playSomeSound(menuLink.innerHTML);
-			console.log(menuLink.innerHTML);
+			console.log(menuLinks.innerHTML);
 		};
 	}
 	$('#showGenre').on('click', function() {
