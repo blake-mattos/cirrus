@@ -29,7 +29,7 @@ $('.genre').click(function(){
 // };
 
 function playSomeSound(genre) {
-	SC.oEmbed("https://soundcloud.com/explore/" +selectedGenre, {auto_play: true}, document.getElementById('player')
+	SC.oEmbed("https://soundcloud.com/toramusic/jaigantic", {auto_play: true}, document.getElementById('player')
 	);
 };
 
@@ -37,6 +37,14 @@ function playSomeSound(genre) {
 function setBG() {
 	$('body').css("background-color","blue");
 };
+
+	SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
+		$(tracks).each(function(index, track) {
+			var artUrl = track.artwork_url;
+			var bigArt = artUrl.replace("large", "t500x500");
+			$('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + bigArt + '">'));
+		});
+	});
 
 // function selectedArt() {
 // 	console.log('selectedArt: ' +selectedArt);
@@ -49,6 +57,7 @@ function setBG() {
 // 		});
 // 	});
 // };
+
 });
 
 
