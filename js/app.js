@@ -7,13 +7,14 @@ $(document).ready(function() {
 
 //set selectedGenre as global var
 var selectedGenre = ('please choose a genre');
+var selectedTrackURL = ('https://soundcloud.com/toramusic/jaigantic');
 console.log(selectedGenre);
 
 //choose a genre
 $('.genre').click(function(){
 		//set selectedGenre to what user clicks on
 		var selectedGenre = $(this).text();
-				getArt();
+		getArt();
 		playSomeSound(selectedGenre);
 		console.log('selected genre: ' + selectedGenre);
 	});
@@ -30,7 +31,7 @@ $('.genre').click(function(){
 // };
 
 function playSomeSound(genre) {
-	SC.oEmbed("https://soundcloud.com/toramusic/jaigantic", {auto_play: true}, document.getElementById('player')
+	SC.oEmbed(selectedTrackURL, {auto_play: true}, document.getElementById('player')
 	);
 };
 
