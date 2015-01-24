@@ -20,7 +20,7 @@ $(document).ready(function() {
 
 	for (var i = 0; i < menuLinks.length; i++) {
 		var menuLink = menuLinks[i];
-		menuLink.onclick = function(e) {
+		menuLinks.onclick = function(e) {
 			e.preventDefault();
 			playSomeSound(menuLink.innerHTML);
 			console.log(menuLink.innerHTML);
