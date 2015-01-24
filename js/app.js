@@ -15,7 +15,7 @@ $('.genre').click(function(){
 		var selectedGenre = $(this).text();
 		playSomeSound(selectedGenre);
 		console.log('selected genre: ' + selectedGenre);
-		getArt;
+		getArt();
 	});
 
 // //player
