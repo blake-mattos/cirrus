@@ -17,16 +17,18 @@ $(document).ready(function() {
 
 	var menuLinks = document.getElementsByClassName('genre');
 	console.log(menuLinks);
+
 	for (var i = 0; i < menuLinks.length; i++) {
 		var menuLink = menuLinks[i];
 		menuLink.onclick = function(e) {
 			e.preventDefault();
 			playSomeSound(menuLink.innerHTML);
+			console.log(menuLink.innerHTML);
 		};
 	}
-$('#showGenre').on('click', function() {
-	alert('show genre');
-})
+	$('#showGenre').on('click', function() {
+	console.log(genre);
+	})
 
 });
 
