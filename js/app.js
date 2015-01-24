@@ -15,22 +15,26 @@ $(document).ready(function() {
 	// 	});
 	// };
 
+
+//choose a genre
 	$('.genre').click(function(){
 		var selectedGenre = $(this).text();
 		playSomeSound(selectedGenre);
 		console.log(selectedGenre);
 	});
 
+
+
 function setBG(bigArt) {
 	$('body').css("background-color","blue");
 };
 
-	SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
+	SC.get('/tracks', { genres: selectedGenre }, function(tracks) {
 		$(tracks).each(function(index, track) {
 			var artUrl = track.artwork_url;
 			var bigArt = artUrl.replace("large", "t500x500");
 			// $('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + bigArt + '">'));
-console.log(bigArt);
+	console.log(bigArt);
 		});
 	});
 
