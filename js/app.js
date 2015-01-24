@@ -14,7 +14,6 @@ $('.genre').click(function(){
 		//set selectedGenre to what user clicks on
 		var selectedGenre = $(this).text();
 		playSomeSound(selectedGenre);
-		selectedArt();
 		console.log('selected genre: ' + selectedGenre);
 	});
 
@@ -30,7 +29,7 @@ $('.genre').click(function(){
 // };
 
 function playSomeSound(genre) {
-	SC.oEmbed("http://soundcloud.com/forss/flickermood", {auto_play: true}, document.getElementById('player')
+	SC.oEmbed("https://soundcloud.com/explore/" +selectedGenre, {auto_play: true}, document.getElementById('player')
 	);
 };
 
@@ -39,17 +38,17 @@ function setBG() {
 	$('body').css("background-color","blue");
 };
 
-function selectedArt() {
-	console.log('selectedArt: ' +selectedArt);
-	SC.get('/tracks', { genres: selectedGenre }, function(tracks) {
-		$(tracks).each(function(index, track) {
-			var artUrl = track.artwork_url;
-			var bigArt = artUrl.replace("large", "t500x500");
-			// $('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + bigArt + '">'));
-			console.log(bigArt);
-		});
-	});
-};
+// function selectedArt() {
+// 	console.log('selectedArt: ' +selectedArt);
+// 	SC.get('/tracks', { genres: selectedGenre }, function(tracks) {
+// 		$(tracks).each(function(index, track) {
+// 			var artUrl = track.artwork_url;
+// 			var bigArt = artUrl.replace("large", "t500x500");
+// 			// $('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + bigArt + '">'));
+// 			console.log(bigArt);
+// 		});
+// 	});
+// };
 });
 
 
@@ -58,12 +57,12 @@ function selectedArt() {
 // });
 
 // $(document).ready(function() {
-// 	// SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
-// 	// 	$(tracks).each(function(index, track) {
-// 	// 		var artUrl = track.artwork_url;
-// 	// 		var bigArt = artUrl.replace("large", "t500x500");
-// 	// 		$('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + bigArt + '">'));
-// 	// 	});
-// 	// });
-// // 	setBG();
-// // }
+// 	SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
+// 		$(tracks).each(function(index, track) {
+// 			var artUrl = track.artwork_url;
+// 			var bigArt = artUrl.replace("large", "t500x500");
+// 			$('#results').append($('<li></li>').html(track.title + ' - ' + '<img src="' + bigArt + '">'));
+// 		});
+// 	});
+// 	setBG();
+// }
