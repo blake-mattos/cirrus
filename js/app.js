@@ -32,9 +32,9 @@ function getTracks(genre) {
 	SC.get('/tracks', { genres: genre }, function(tracks) {
 		// $(tracks).each(function(index, track) {
 		// 	//SoundCloud returns 50 tracks by default, this picks one of them at random
-		// 	var random = Math.floor(Math.random() * 49);
+			var random = Math.floor(Math.random() * 49);
 		// 	$('#results').append($('<li></li>').html(track.id));
-		console.log(tracks.id);
+		console.log(tracks[random].id);
 	});
 };
 
