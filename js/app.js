@@ -14,29 +14,41 @@ $(document).ready(function() {
 //set selectedGenre as global var
 var selectedGenre = ('please choose a genre');
 
-//choose a genre
+//choose a genre and set it to 'selectedGenre'
 $('.genre').click(function() {
 		//set selectedGenre to what user clicks on
 		var selectedGenre = $(this).text();
 		// getArt();
 		// playSomeSound(selectedGenre);
-		console.log('selected genre: ' + selectedGenre);
+		getTrack(selectedGenre);
 	});
+console.log('selected genre: ' + selectedGenre);
 
 
+//pick random track from genre -----/
 
-//pick random track -----/
+//return tracks from selected genre
+function getTracks(genre) {
+	console.log('getTracks started');
+	SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
+		$(tracks).each(function(index, track) {
+			$('#results').append($('<li></li>').html(track.uri));
+		});
+	});
+};
+
+
+//pick on of those tracks at random & store as var
+
 
 //autoplay & display art in bg -----/
 
 
-
+//pass selected track  var to player
 
 
 var selectedTrackURL = ('https://soundcloud.com/toramusic/jaigantic');
 console.log(selectedGenre);
-
-
 
 
 // //player
@@ -52,7 +64,7 @@ console.log(selectedGenre);
 
 function playSomeSound(genre) {
 	SC.oEmbed(selectedTrackURL, {auto_play: true}, document.getElementById('player')
-	);
+		);
 };
 
 //set art as bg
