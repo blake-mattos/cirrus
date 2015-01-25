@@ -17,7 +17,7 @@ var selectedGenre = ('please choose a genre');
 //choose a genre and set it to 'selectedGenre'
 $('.genre').click(function() {
 		//set selectedGenre to what user clicks on
-		var selectedGenre = $(this).text();
+		selectedGenre = $(this).text();
 		// getArt();
 		// playSomeSound(selectedGenre);
 		console.log('selected genre: ' + selectedGenre);
