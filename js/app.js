@@ -36,7 +36,7 @@ function getTracks(genre) {
 
 		theTrack = tracks[random];
 		playTrack(theTrack.permalink_url);
-		setBG('blue');
+		setBG(theTrack.artwork_url);
 
 		console.log('Now Playing: ' +theTrack.title);
 	});
@@ -51,7 +51,8 @@ function playTrack(trackUrl) {
 
 //set art as bg
 function setBG(artUrl) {
-	$('body').css("background-color", artUrl);
+	var bigArt = artUrl.replace("large", "t500x500");
+	console.log(bigArt);
 };
 
 console.log(selectedGenre);
