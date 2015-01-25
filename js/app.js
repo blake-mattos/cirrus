@@ -31,7 +31,7 @@ function getTracks(genre) {
 	console.log('getTracks started:' +selectedGenre);
 	SC.get('/tracks', { genres: genre }, function(tracks) {
 		$(tracks).each(function(index, track) {
-			$('#results').append($('<li><a></a></li>').html(track.permalink_url));
+			$('#results').append($('<li></li>').html(track.permalink_url) + 'whatever');
 		});
 	});
 };
