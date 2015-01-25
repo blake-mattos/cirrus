@@ -30,12 +30,15 @@ $('.genre').click(function() {
 function getTracks(genre) {
 	console.log('getTracks started:' +selectedGenre);
 	SC.get('/tracks', { genres: genre }, function(tracks) {
-		$(tracks).each(function(index, track) {
+		$('#results').append($('<li></li>').html(track.permalink_url));
 
-			//SoundCloud returns 50 tracks by default, this picks one of them at random
-			var random = Math.floor(Math.random() * 49);
-			$('#results').append($('<li></li>').html(track.permalink_url));
-		});
+		// $(tracks).each(function(index, track) {
+		// 	//SoundCloud returns 50 tracks by default, this picks one of them at random
+		// 	var random = Math.floor(Math.random() * 49);
+		// 	$('#results').append($('<li></li>').html(track.permalink_url));
+		// });
+
+		
 	});
 };
 
