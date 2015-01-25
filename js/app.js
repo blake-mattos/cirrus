@@ -35,7 +35,6 @@ function getTracks(genre) {
 		// 	var random = Math.floor(Math.random() * 49);
 		// 	$('#results').append($('<li></li>').html(track.id));
 		console.log(tracks);
-		});
 	});
 };
 
