@@ -32,7 +32,7 @@ function getTracks(genre) {
 	console.log('getTracks started:' +selectedGenre);
 	SC.get('/tracks', { genres: genre }, function(tracks) {
 		$(tracks).each(function(index, track) {
-			$('#results').append($('<li></li>').html(track.uri));
+			$('#results').append($('<li></li>').html(track.permalink_url));
 		});
 	});
 };
