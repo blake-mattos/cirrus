@@ -5,19 +5,39 @@ $(document).ready(function() {
 		client_id: '781aa72f47d54e21fc84ec186d504e1c'
 	});
 
+
+// what does it need to do?
+// user selects a genre -> picks a random track -> autoplay & display art in bg
+
+//select genre -----/
+
 //set selectedGenre as global var
 var selectedGenre = ('please choose a genre');
+
+//choose a genre
+$('.genre').click(function() {
+		//set selectedGenre to what user clicks on
+		var selectedGenre = $(this).text();
+		// getArt();
+		// playSomeSound(selectedGenre);
+		console.log('selected genre: ' + selectedGenre);
+	});
+
+
+
+//pick random track -----/
+
+//autoplay & display art in bg -----/
+
+
+
+
+
 var selectedTrackURL = ('https://soundcloud.com/toramusic/jaigantic');
 console.log(selectedGenre);
 
-//choose a genre
-$('.genre').click(function(){
-		//set selectedGenre to what user clicks on
-		var selectedGenre = $(this).text();
-		getArt();
-		playSomeSound(selectedGenre);
-		console.log('selected genre: ' + selectedGenre);
-	});
+
+
 
 // //player
 // function playSomeSound(genre) {
