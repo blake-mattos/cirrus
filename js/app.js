@@ -43,7 +43,7 @@ function getTracks(genre) {
 //autoplay & display art in bg -----/
 
 function playTrack(trackURL) {
-	SC.oEmbed(trackURL, {auto_play: true}, document.getElementById('player');
+	SC.oEmbed(trackURL, {auto_play: true}, document.getElementById('player'));
 };
 
 //pass selected track  var to player
