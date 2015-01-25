@@ -38,8 +38,9 @@ function getTracks(genre) {
 
 		// 	$('#results').append($('<li></li>').html(track.id));
 		
-		theTrack = tracks[random].id;
+		theTrack = tracks[random];
 		// console.log(tracks[random].permalink);
+		console.log(theTrack.id);
 	});
 };
 
@@ -53,8 +54,7 @@ function getTracks(genre) {
 //pass selected track  var to player
 
 
-
-console.log('selected genre: ' +selectedGenre '\n' 'the track: ' +theTrack);
+console.log(selectedGenre);
 
 
 // //player
