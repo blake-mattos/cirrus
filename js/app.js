@@ -13,6 +13,7 @@ $(document).ready(function() {
 
 //set selectedGenre as global var
 var selectedGenre = ('please choose a genre');
+var theTrack;
 
 //choose a genre and set it to 'selectedGenre'
 $('.genre').click(function() {
@@ -31,12 +32,13 @@ function getTracks(genre) {
 	console.log('getTracks started:' +selectedGenre);
 	SC.get('/tracks', { genres: genre }, function(tracks) {
 		// $(tracks).each(function(index, track) {
+
 		// 	//SoundCloud returns 50 tracks by default, this picks one of them at random
 			var random = Math.floor(Math.random() * 49);
+
 		// 	$('#results').append($('<li></li>').html(track.id));
 		
-		var theTrack = tracks[random].id;
-console.log(theTrack);
+		theTrack = tracks[random].id;
 		// console.log(tracks[random].permalink);
 	});
 };
@@ -51,8 +53,8 @@ console.log(theTrack);
 //pass selected track  var to player
 
 
-var selectedTrackURL = ('https://soundcloud.com/toramusic/jaigantic');
-console.log(selectedGenre);
+
+console.log('selected genre: ' +selectedGenre '\n' 'the track: ' +theTrack);
 
 
 // //player
