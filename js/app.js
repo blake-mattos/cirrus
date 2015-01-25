@@ -38,7 +38,7 @@ function getTracks(genre) {
 		playTrack(theTrack.permalink_url);
 		setBG('blue');
 
-		console.log('Now Playing: ' +theTrack.title)l;
+		console.log('Now Playing: ' +theTrack.title);
 	});
 };
 
