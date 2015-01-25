@@ -34,7 +34,7 @@ function getTracks(genre) {
 
 			//SoundCloud returns 50 tracks by default, this picks one of them at random
 			var random = Math.floor(Math.random() * 49);
-			$('#results').append($('<li></li>').html(track[random].permalink_url));
+			$('#results').append($('<li></li>').html(track.permalink_url));
 		});
 	});
 };
