@@ -35,22 +35,26 @@ function getTracks(genre) {
 			var random = Math.floor(Math.random() * 49);
 
 		theTrack = tracks[random];
-		console.log(theTrack.id);
 		playTrack(theTrack.permalink_url);
+		setBG('blue');
+
+		console.log('Now Playing: ' +theTrack.title)l;
 	});
 };
 
 //autoplay & display art in bg -----/
 
-function playTrack(trackURL) {
-	SC.oEmbed(trackURL, {auto_play: true}, document.getElementById('player'));
+// play theTrack in player
+function playTrack(trackUrl) {
+	SC.oEmbed(trackUrl, {auto_play: true}, document.getElementById('player'));
 };
 
-//pass selected track  var to player
-
+//set art as bg
+function setBG(artUrl) {
+	$('body').css("background-color", artUrl);
+};
 
 console.log(selectedGenre);
-
 
 // //player
 // function playSomeSound(genre) {
@@ -63,15 +67,8 @@ console.log(selectedGenre);
 // 		});
 // };
 
-function playSomeSound(genre) {
-	SC.oEmbed(selectedTrackURL, {auto_play: true}, document.getElementById('player')
-		);
-};
 
-//set art as bg
-function setBG() {
-	$('body').css("background-color","blue");
-};
+
 
 
 function getArt() {
