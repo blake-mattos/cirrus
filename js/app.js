@@ -20,7 +20,7 @@ $('.genre').click(function() {
 		var selectedGenre = $(this).text();
 		// getArt();
 		// playSomeSound(selectedGenre);
-		getTrack(selectedGenre);
+		getTracks(selectedGenre);
 	});
 console.log('selected genre: ' + selectedGenre);
 
@@ -30,7 +30,7 @@ console.log('selected genre: ' + selectedGenre);
 //return tracks from selected genre
 function getTracks(genre) {
 	console.log('getTracks started');
-	SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
+	SC.get('/tracks', { genres: genre }, function(tracks) {
 		$(tracks).each(function(index, track) {
 			$('#results').append($('<li></li>').html(track.uri));
 		});
