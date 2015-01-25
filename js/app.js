@@ -24,7 +24,6 @@ $('.genre').click(function() {
 		getTracks(selectedGenre);
 	});
 
-
 //pick random track from genre -----/
 
 //return tracks from selected genre
@@ -32,13 +31,13 @@ function getTracks(genre) {
 	console.log('getTracks started:' +selectedGenre);
 	SC.get('/tracks', { genres: genre }, function(tracks) {
 		$(tracks).each(function(index, track) {
-			$('#results').append($('<li></li>').html(track.permalink_url));
+			$('#results').append($('<li><a></a></li>').html(track.permalink_url));
 		});
 	});
 };
 
 
-//pick on of those tracks at random & store as var
+//pick one of those tracks at random & store as var
 
 
 //autoplay & display art in bg -----/
