@@ -5,7 +5,6 @@ $(document).ready(function() {
 		client_id: '781aa72f47d54e21fc84ec186d504e1c'
 	});
 
-
 // what does it need to do?
 // user selects a genre -> picks a random track -> autoplay & display art in bg
 
@@ -27,29 +26,25 @@ $('.genre').click(function() {
 
 //pick random track from genre -----/
 
-//return tracks from selected genre
+//return tracks from selected genre, choose one at random & set theTrack to the chosen track
 function getTracks(genre) {
 	console.log('getTracks started:' +selectedGenre);
 	SC.get('/tracks', { genres: genre }, function(tracks) {
-		// $(tracks).each(function(index, track) {
 
 		// 	//SoundCloud returns 50 tracks by default, this picks one of them at random
 			var random = Math.floor(Math.random() * 49);
 
-		// 	$('#results').append($('<li></li>').html(track.id));
-		
 		theTrack = tracks[random];
-		// console.log(tracks[random].permalink);
 		console.log(theTrack.id);
+		playTrack(theTrack.permalink_url);
 	});
 };
 
-
-//pick one of those tracks at random & store as var
-
-
 //autoplay & display art in bg -----/
 
+function playTrack(trackURL) {
+	SC.oEmbed(trackURL, {auto_play: true}, document.getElementById('player')
+}
 
 //pass selected track  var to player
 
