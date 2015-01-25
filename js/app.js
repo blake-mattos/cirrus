@@ -20,16 +20,16 @@ $('.genre').click(function() {
 		var selectedGenre = $(this).text();
 		// getArt();
 		// playSomeSound(selectedGenre);
+		console.log('selected genre: ' + selectedGenre);
 		getTracks(selectedGenre);
 	});
-console.log('selected genre: ' + selectedGenre);
 
 
 //pick random track from genre -----/
 
 //return tracks from selected genre
 function getTracks(genre) {
-	console.log('getTracks started');
+	console.log('getTracks started:' +selectedGenre);
 	SC.get('/tracks', { genres: genre }, function(tracks) {
 		$(tracks).each(function(index, track) {
 			$('#results').append($('<li></li>').html(track.uri));
