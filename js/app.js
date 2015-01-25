@@ -52,7 +52,7 @@ function playTrack(trackUrl) {
 //set art as bg
 function setBG(artUrl) {
 	var bigArt = artUrl.replace("large", "t500x500");
-	$('#bg').css("background-color", "pink");
+	$('#bg').css("background-image", 'url(' + bigArt + ')');
 	console.log(bigArt);
 };
 
