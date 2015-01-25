@@ -35,7 +35,7 @@ function getTracks(genre) {
 			var random = Math.floor(Math.random() * 49);
 		// 	$('#results').append($('<li></li>').html(track.id));
 		
-		var theTrack = tracks.[random].id;
+		var theTrack = tracks[random].id;
 console.log(theTrack);
 		// console.log(tracks[random].permalink);
 	});
