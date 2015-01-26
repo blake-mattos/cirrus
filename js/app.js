@@ -69,10 +69,6 @@ console.log(selectedGenre);
 // 		});
 // };
 
-
-
-
-
 function getArt() {
 	SC.get('/tracks', { genres: 'ambient' }, function(tracks) {
 		$(tracks).each(function(index, track) {
@@ -82,6 +78,13 @@ function getArt() {
 		});
 	});
 };
+
+
+$("#startPlayer").on('click', function() {
+$("#splashWrap").slideUp('fast');
+$("#selectorWrap").slideDown('fast');
+console.log('splashWrap should go away');
+});
 
 // function selectedArt() {
 // 	console.log('selectedArt: ' +selectedArt);

@@ -1,5 +1,11 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
 		background-image: url('../img/bg.jpg');
+		font-family: 'code_pro_light_demoregular', sans-serif;
 		position: fixed;
 background-size: cover;
 background-repeat: no-repeat;
@@ -9,7 +15,39 @@ background-repeat: no-repeat;
 	left: 0;
 }
 
-#bg {
+@font-face {
+    font-family: 'code_pro_light_demoregular';
+    src: url('../font/Code_Pro_Light_Demo-webfont.eot');
+    src: url('../font/Code_Pro_Light_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Code_Pro_Light_Demo-webfont.woff2') format('woff2'),
+         url('../font/Code_Pro_Light_Demo-webfont.woff') format('woff'),
+         url('../font/Code_Pro_Light_Demo-webfont.ttf') format('truetype'),
+         url('../font/Code_Pro_Light_Demo-webfont.svg#code_pro_light_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*splash*/
+
+#splashWrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.centerBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.startWrap {
+margin-top: 160px;
+}
+
+#splashBG {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -26,18 +64,61 @@ background-repeat: no-repeat;
 
 #logoType {
 	position: absolute;
-	background-image: url('..img/cirrus.svg');
-	width: 300px;
-	height: 200px;
-	top: 20%;
+	background-image: url('../img/cirrus.svg');
+	width: 350px;
+	height: 300px;
+	top: 33%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+button {
+	padding: 20px 40px;
+	display: inline;
+	outline: 0;
+	border: 1px solid rgba(255,255,255,.3);
+	cursor: pointer;
+	font-family: 'code_pro_light_demoregular', sans-serif;
+	font-size: 18px;
+	background-color: rgba(255,255,255,0);
+	color: #fff;
+	transition: all .4s ease;
+}
+
+button:hover {
+	background-color: rgba(255,255,255,.1);
+	border: 1px solid rgba(255,255,255,.4);
+
+}
+
+button:active {
+	background-color: rgba(0,0,0,.2);
+	border: 1px solid rgba(255,255,255,.6);}
+
+
+/*selector*/
+
+#selectorWrap {
+	display: none;
+}
+
+.logo {
+position: absolute;
+	background-image: url('../img/cirrus.svg');
+	width: 350px;
+	height: 300px;
+	top: 33%;
+	left: 50%;	
+}
+
+/*player*/
+
 
 #playerWrap {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
+	display: none;
 }
 
 #player {
