@@ -103,12 +103,16 @@ button:active {
 }
 
 .logo {
-position: absolute;
-	background-image: url('../img/cirrus.svg');
-	width: 350px;
-	height: 300px;
-	top: 33%;
-	left: 50%;	
+	position: absolute;
+	background-image: url('../img/logo.svg');
+	width: 30px;
+	height: 40px;
+	top: 10px;
+	left: 10px;	
+}
+
+.title {
+	font-size: 48px;
 }
 
 /*player*/
