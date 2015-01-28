@@ -93,7 +93,12 @@ $(".logo").on('click', function() {
 	console.log('home');
 });
 
-// function selectedArt() {
+$(".genre").on('click', function() {
+	$('#selectorWrap').hide();
+	$('#playerWrap').show();
+});
+
+// function selectedArt() {™	
 // 	console.log('selectedArt: ' +selectedArt);
 // 	SC.get('/tracks', { genres: selectedGenre }, function(tracks) {
 // 		$(tracks).each(function(index, track) {
