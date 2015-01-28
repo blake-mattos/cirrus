@@ -47,7 +47,7 @@ background-repeat: no-repeat;
 margin-top: 160px;
 }
 
-#splashBG {
+/*#splashBG {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -60,7 +60,7 @@ margin-top: 160px;
 	bottom: 0;
 	left: 0;
 	z-index: -1;
-}
+}*/
 
 #logoType {
 	position: absolute;
@@ -144,7 +144,17 @@ color: #000;
 	width: 100vw;
 	height: 100vh;
 	display: none;
-}
+	background-size: cover;
+	display: block;
+	filter: blur(32px);
+	-webkit-filter: blur(32px);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+/*	z-index: -1;
+*/}
+
 
 #player {
 	position: absolute;
