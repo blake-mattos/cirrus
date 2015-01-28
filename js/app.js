@@ -49,10 +49,10 @@ function playTrack(trackUrl) {
 	SC.oEmbed(trackUrl, {auto_play: true}, document.getElementById('player'));
 };
 
-//set art as bg
+//set art as playerWrap bg
 function setBG(artUrl) {
 	var bigArt = artUrl.replace("large", "t500x500");
-	$('#bg').css("background-image", 'url(' + bigArt + ')');
+	$('#playerWrap').css("background-image", 'url(' + bigArt + ')');
 	console.log(bigArt);
 };
 
