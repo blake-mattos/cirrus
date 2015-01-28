@@ -82,6 +82,7 @@ $(document).ready(function() {
         $("#splashWrap").show();
         $('#selectorWrap').hide();
         $('#playerWrap').hide();
+        $('#player').hide();
         console.log('home');
     });
 
