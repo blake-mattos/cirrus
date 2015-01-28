@@ -32,7 +32,7 @@ function getTracks(genre) {
 	SC.get('/tracks', { genres: genre }, function(tracks) {
 
 		// 	//SoundCloud returns 50 tracks by default, this picks one of them at random
-			var random = Math.floor(Math.random() * 49);
+		var random = Math.floor(Math.random() * 49);
 
 		theTrack = tracks[random];
 		playTrack(theTrack.permalink_url);
@@ -81,9 +81,16 @@ function getArt() {
 
 
 $("#startPlayer").on('click', function() {
-$("#splashWrap").slideUp('fast');
-$("#selectorWrap").slideDown('fast');
-console.log('splashWrap should go away');
+	$("#splashWrap").fadeOut('fast');
+	$("#selectorWrap").fadeIn('fast');
+	console.log('splashWrap should go away');
+});
+
+$(".logo").on('click', function() {
+	$("#splashWrap").show();
+	$('#selectorWrap').hide();
+	$('#playerWrap').hide();
+	console.log('home');
 });
 
 // function selectedArt() {
