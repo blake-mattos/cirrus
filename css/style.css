@@ -97,7 +97,6 @@ button:active {
 
 
 /*selector*/
-
 #selectorWrap {
 	display: none;
 }
@@ -137,16 +136,13 @@ color: #000;
 
 
 /*player*/
-
-
 #playerWrap {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
 	display: none;
 	background-size: cover;
-/*	display: block;
-*/	filter: blur(32px);
+	filter: blur(32px);
 	-webkit-filter: blur(32px);
 	top: 0;
 	right: 0;
@@ -158,8 +154,7 @@ color: #000;
 
 #player {
 	position: absolute;
-/*	height: 50px;
-*/	width: 300px;
+	width: 300px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
