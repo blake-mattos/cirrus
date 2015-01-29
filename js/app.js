@@ -33,7 +33,7 @@ $(document).ready(function() {
         }, function(tracks) {
 
             // 	//SoundCloud returns 50 tracks by default, this picks one of them at random
-            var random = Math.floor(Math.random() * 49);
+            var random = Math.floor(Math.random() * tracks.length);
 
             theTrack = tracks[random];
             playTrack(theTrack.permalink_url);
